@@ -5,9 +5,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
-/**
- * Created by cda5732 on 25/03/2015.
- */
 @SpringBootApplication
 public class ApplicationConfiguration {
     public static void main(String[] args) {
@@ -15,6 +12,7 @@ public class ApplicationConfiguration {
         Zoo zoo = context.getBean(Zoo.class);
         System.out.println(zoo.getName());
         System.out.println("Nr. of Animals: " + zoo.countAnimals());
+
         zoo.feedAnimals();
     }
 }

@@ -1,8 +1,5 @@
 package com.realdolmen.spring.domain;
 
-/**
- * Created by cda5732 on 25/03/2015.
- */
 public abstract class Animal {
     private String name;
 
@@ -19,6 +16,6 @@ public abstract class Animal {
     }
 
     public void feed(Food food) {
-        System.out.println("Feeding " + getName() + " " + food.getName());
+        System.out.println("Feeding '" + getName() + "' a '" + food.getName() + "'");
     }
 }

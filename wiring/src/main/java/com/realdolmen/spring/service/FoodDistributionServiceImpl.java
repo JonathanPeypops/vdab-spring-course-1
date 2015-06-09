@@ -7,9 +7,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-/**
- * Created by cda5732 on 13/04/2015.
- */
 @Service
 public class FoodDistributionServiceImpl implements FoodDistributionService {
 
@@ -18,6 +15,12 @@ public class FoodDistributionServiceImpl implements FoodDistributionService {
 
     @Override
     public void feedAnimalsByType(List<Animal> animals) {
-        animals.stream().forEach(x -> x.feed(foodRepository.findFoodForAnimalType(x.getClass())));
+        // For Java 7
+        for (Animal animal : animals) {
+            animal.feed(foodRepository.findFoodForAnimalType(animal.getClass()));
+        }
+
+        // For Java 8
+        //animals.stream().forEach(x -> x.feed(foodRepository.findFoodForAnimalType(x.getClass())));
     }
 }

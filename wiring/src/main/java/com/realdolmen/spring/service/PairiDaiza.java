@@ -7,9 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by cda5732 on 25/03/2015.
- */
 public class PairiDaiza implements Zoo {
     private String name;
     private List<Animal> animals = new ArrayList<>();
